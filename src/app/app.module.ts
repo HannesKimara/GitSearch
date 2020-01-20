@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { RepoSearchComponent } from './repo-search/repo-search.component';
 import { RepoDisplayComponent } from './repo-display/repo-display.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CapitalizePipe } from './capitalize.pipe'
+import { CapitalizePipe } from './capitalize.pipe';
+import { UserDetailsComponent } from './user-details/user-details.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CapitalizePipe } from './capitalize.pipe'
     RepoSearchComponent,
     RepoDisplayComponent,
     NavbarComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
