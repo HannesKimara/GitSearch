@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { User } from './user';
+import { Repository } from './repository';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,11 @@ import { User } from './user';
 export class GitHTTPService {
   user: User;
   repos:any;
+  repo: Repository;
+
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '');
-
+    this.repo = new Repository('', '', '');
    }
 
   userRequest() {
@@ -41,7 +44,9 @@ export class GitHTTPService {
   repositoryRequest() {
     const promise = new Promise((resolve, reject) => {
       this.http.get(`${environment.BASE_URL}/repos`, {headers: {Authorization: `Bearer ${environment.API_KEY}`}}).toPromise().then(response => {
-          this.repos = response;
+          this.repo.name = response[0].name;
+          this.repo.html_url = response[0].html_url;
+          this.repo.description = response[0].description;
           resolve();
       },
       error => {
