@@ -11,7 +11,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RepoSearchComponent } from './repo-search/repo-search.component';
 import { RepoDisplayComponent } from './repo-display/repo-display.component';
-import { NavbarComponent } from './navbar/navbar.component'
+import { NavbarComponent } from './navbar/navbar.component';
+import { CapitalizePipe } from './capitalize.pipe'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavbarComponent } from './navbar/navbar.component'
     NotFoundComponent,
     RepoSearchComponent,
     RepoDisplayComponent,
-    NavbarComponent
+    NavbarComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
