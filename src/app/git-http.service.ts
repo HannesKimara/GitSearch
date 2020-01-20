@@ -16,6 +16,7 @@ export class GitHTTPService {
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '');
     this.repo = new Repository('', '', '');
+    this.repos = []
    }
 
   userRequest() {
@@ -44,9 +45,7 @@ export class GitHTTPService {
   repositoryRequest() {
     const promise = new Promise((resolve, reject) => {
       this.http.get(`${environment.BASE_URL}/repos`, {headers: {Authorization: `Bearer ${environment.API_KEY}`}}).toPromise().then(response => {
-          this.repo.name = response[0].name;
-          this.repo.html_url = response[0].html_url;
-          this.repo.description = response[0].description;
+          this.repos = response;
           resolve();
       },
       error => {
