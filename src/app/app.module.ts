@@ -9,7 +9,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RepoSearchComponent } from './repo-search/repo-search.component'
+import { RepoSearchComponent } from './repo-search/repo-search.component';
+import { RepoDisplayComponent } from './repo-display/repo-display.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RepoSearchComponent } from './repo-search/repo-search.component'
     SearchComponent,
     LandingComponent,
     NotFoundComponent,
-    RepoSearchComponent
+    RepoSearchComponent,
+    RepoDisplayComponent
   ],
   imports: [
     BrowserModule,

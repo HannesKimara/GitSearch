@@ -9,9 +9,9 @@
         </div>
         <div class = "w3-threequarter">
             <div class = "w3-row">
-                <div class = "w3-half">
+                <div class = "w3-half" *ngFor = "let rep of repos; let i = index">
                     <div class="gs-card">
-                        
+                        <p>{{rep.name}}</p>
                     </div>
                 </div>
             </div>    

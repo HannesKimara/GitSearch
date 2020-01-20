@@ -14,8 +14,8 @@
 <div>
     <div class = "w3-container">
         <div class = "w3-row">
-            <div class = "">
-                <div class="gs-card" *ngFor = "let user of users;let i = index" style = "max-width:200px;">
+            <div class = "w3-quarter" *ngFor = "let user of users;let i = index">
+                <div class="gs-card" style = "max-width:200px;">
                     <img src={{user.avatar_url}} alt="Avatar" style="width:100%">
                     <p><a href={{user.html_url}} target = "_blank"><i class="fa fa-github"></i></a>&emsp;{{user.login}}</p>
                 </div>
