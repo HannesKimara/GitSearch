@@ -1,1 +1,9 @@
-<p>user-details works!</p>
+<div class = "w3-container">
+    <div class = "w3-row">
+        <div class = "" *ngFor = "let repo of repos;let i = index">
+            <div class="gs-card" style="">
+                <p>{{repo.name}} created at {{repo.created_at}}</p>
+            </div>
+        </div>
+    </div>
+</div>
