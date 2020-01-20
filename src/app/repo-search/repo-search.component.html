@@ -17,7 +17,7 @@
             <div class = "w3-third" *ngFor = "let rep of repos; let i = index">
                 <div class="gs-card">
                     <a href = {{rep.html_url}} target = "_blank"><i class="fa fa-github w3-right w3-padding w3-margin"></i></a>
-                    <p>{{rep.name}}<br><a href = {{rep.owner.html_url}} target="_blank">{{rep.owner.login}}</a></p>
+                    <p>{{rep.name}}<br><a href = {{rep.owner.html_url}} target="_blank">{{rep.owner.login | capitalize}}</a></p>
                 </div>
             </div>
         </div>
