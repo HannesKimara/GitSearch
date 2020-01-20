@@ -10,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RepoSearchComponent } from './repo-search/repo-search.component';
-import { RepoDisplayComponent } from './repo-display/repo-display.component'
+import { RepoDisplayComponent } from './repo-display/repo-display.component';
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RepoDisplayComponent } from './repo-display/repo-display.component'
     LandingComponent,
     NotFoundComponent,
     RepoSearchComponent,
-    RepoDisplayComponent
+    RepoDisplayComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

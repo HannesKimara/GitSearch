@@ -1,1 +1,25 @@
-<p>repo-search works!</p>
+<div class = "w3-container w3-margin-top gs-search-container" style= "width:40%; margin:auto">
+    <div class = "w3-row-padding">
+        <form (ngSubmit) = "searchRepos()">
+            <div class = "w3-padding-w3-margin-top">
+                <input class = "w3-input" placeholder = "Search For Repositories" style = "outline:none" [(ngModel)]="query" name = "query" required>
+            </div>
+            <div class = "w3-margin-top">
+                <button class = "w3-button w3-grey w3-right" type="submit">SEARCH</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <div class = "w3-container">
+        <div class = "w3-row">
+            <div class = "w3-third" *ngFor = "let rep of repos; let i = index">
+                <div class="gs-card">
+                    <a href = {{rep.html_url}} target = "_blank"><i class="fa fa-github w3-right w3-padding w3-margin"></i></a>
+                    <p>{{rep.name}}<br><a href = {{rep.owner.html_url}} target="_blank">{{rep.owner.login}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
